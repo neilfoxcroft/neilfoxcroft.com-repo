@@ -1,9 +1,10 @@
 import React from 'react';
+import LargeBanner from '../components/LargeBanner';
 
 function HomePage(props) {
 
     return (
-        <p>HomePage works</p>
+        <LargeBanner title={props.title} subTitle={props.subTitle} homeText={props.homeText} />
     )
 
 }

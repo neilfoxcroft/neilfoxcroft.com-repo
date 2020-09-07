@@ -1,12 +1,11 @@
 //main web application
 
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import { Navbar, NavbarBrand, Nav } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import './App.css';
 
-import HeaderBar from "./HeaderBar.js"
 import Footer from "./components/Footer.js"
 import HomePage from "./pages/HomePage.js"
 import AboutPage from "./pages/AboutPage.js"
@@ -24,8 +23,9 @@ class App extends React.Component {
         {title: 'Contact', path: "/contact"}
       ],
       home: {
-        title: 'Title',
-        subTitle: 'promising future developer',
+        title: 'Some random title',
+        subTitle: 'Some random sub title',
+        homeText: 'some random text',
       },
       about: {
         title: 'About Me',
@@ -35,6 +35,7 @@ class App extends React.Component {
       }
     }
   }
+
   render() {
     return (
      <Router>
@@ -47,21 +48,20 @@ class App extends React.Component {
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/">About</Link>
-                <Link className="nav-link" to="/">Contact</Link>
+                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/contact">Contact</Link>
               </Nav>     
             </Navbar.Collapse>
           </Navbar>
 
-          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
-          <Route path="/" exact render={() => <AboutPage title={this.state.about.title} /> } />
-          <Route path="/" exact render={() => <ContactPage title={this.state.contact.title} />} />
+          <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} homeText={this.state.home.homeText} />} />
+          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} /> } />
+          <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} />} />
 
           <Footer />
         
        </Container>
-
-     </Router>
+      </Router>
     );
   }
 }
