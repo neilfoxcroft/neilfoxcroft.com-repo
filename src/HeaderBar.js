@@ -4,7 +4,7 @@ function HeaderBar() {
   return (
     <div>
       <h1>Neil Foxcroft</h1>
-      <p>Personal Technical CV coming soon...</p>
+      <p>DNS TEST [1]</p>
     </div>
   );
 }
