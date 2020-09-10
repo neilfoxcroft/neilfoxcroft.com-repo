@@ -67,17 +67,33 @@ class ContactPage extends React.Component {
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
-                            <Form.Control id="full-name" name="user_name" type="text" value={this.state.user_name} onChange={this.handleChange}/>                           
+                            <Form.Control required 
+                            id="full-name" 
+                            name="user_name" 
+                            type="text" 
+                            value={this.state.user_name} 
+                            onChange={this.handleChange}/>                           
                         </Form.Group>
 
                         <Form.Group>
                             <Form.Label htmlFor="email">Email</Form.Label>
-                            <Form.Control id="email" name="user_email" type="email" value={this.state.user_email} onChange={this.handleChange}/>                           
+                            <Form.Control required
+                            id="email" 
+                            name="user_email" 
+                            type="email" 
+                            value={this.state.user_email} 
+                            onChange={this.handleChange}/>                           
                         </Form.Group>
 
                         <Form.Group>
                             <Form.Label htmlFor="message">Message</Form.Label>
-                            <Form.Control id="message" name="message" as="textarea"rows="3" value={this.state.message} onChange={this.handleChange}/>                           
+                            <Form.Control required
+                            id="message" 
+                            name="message" 
+                            as="textarea"
+                            rows="3" 
+                            value={this.state.message} 
+                            onChange={this.handleChange}/>                           
                         </Form.Group>
 
                         <Button className="d-inlineblock" varient="primary" type="submit" disabled={this.state.disabled}>
