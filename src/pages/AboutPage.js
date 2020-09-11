@@ -8,7 +8,7 @@ function AboutPage(props) {
         <div>
             <LargeBanner title={props.title} />
             <Content>
-                Fill in info at later stage
+                Check back later to learn more about me.
             </Content>
         </div>
 
