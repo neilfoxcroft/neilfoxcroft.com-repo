@@ -8,7 +8,9 @@ function AboutPage(props) {
         <div>
             <LargeBanner title={props.title} />
             <Content>
-                Fill in info at later stage
+                <p>I am a student currently studying BSc in Information Technology at the University of the North-West.</p>
+                <p>I am skilled in JAVA and love object orientated programming.</p>
+                <p>This summary and about page will probably develop as I develop this webpage</p>
             </Content>
         </div>
 

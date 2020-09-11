@@ -56,6 +56,7 @@ class ContactPage extends React.Component {
                 emailSent: false,
             })
           });
+         
     }
 
     render() {
@@ -100,8 +101,13 @@ class ContactPage extends React.Component {
                             Send
                         </Button>
 
-                        {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p> }
-                        {this.state.emailSent === false && <p className="d-inline err-msg">Email Failed</p> }
+                        {this.state.emailSent === true && <div className="d-inline">
+                                <svg class="d-inline checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            </svg>
+                        </div>}  
+                        {this.state.emailSent === false && <p className="d-inline err-msg">Message Failed :(</p> }
                   </Form>
               </Content>
 
