@@ -61,11 +61,11 @@ class ContactPage extends React.Component {
 
     render() {
         return (
-          <div>
+          <div id="body-tag">
               <LargeBanner title={this.props.title} />
 
               <Content>
-                    <Form onSubmit={this.handleSubmit}>
+                    <Form id="contact-form-element" onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
                             <Form.Control required 
@@ -107,7 +107,7 @@ class ContactPage extends React.Component {
                                 <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
                             </svg>
                         </div>}  
-                        {this.state.emailSent === false && <p className="d-inline err-msg">Message Failed :(</p> }
+                        {this.state.emailSent === false && <p className="d-inline err-msg">Message Failed </p> }
                   </Form>
               </Content>
 
