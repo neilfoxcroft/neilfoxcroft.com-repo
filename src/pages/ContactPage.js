@@ -110,13 +110,9 @@ class ContactPage extends React.Component {
                         {this.state.emailSent === false && <p className="d-inline err-msg">Message Failed </p> }
                   </Form>
               </Content>
-
-              
-
           </div>
         );
     }
-
 }
 
 export default ContactPage;

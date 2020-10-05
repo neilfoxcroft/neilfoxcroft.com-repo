@@ -14,6 +14,32 @@ code {
 		monospace;
 }
 
+.g-card {
+	margin: 20px;
+}
+
+.g-card-image {
+	border-radius: 10px;
+	width: 300px;
+	height: 480px;
+	box-shadow: 0px 0px 3px 1px #ccc;
+}
+
+.g-card-info {
+	margin-top: 10px;
+	min-height: 100px;
+}
+
+.g-card-title {
+	font-size: 24px;
+	margin: 0px;
+}
+
+.g-card-sub-title {
+	font-size: 16px;
+	margin: 0px;
+}
+
 .success-msg {
 	color: #57a773;
 	padding: 10px 15px;
@@ -200,4 +226,29 @@ code {
 		-webkit-transform: rotate(360deg);
 		transform: rotate(360deg);
 	}
+}
+
+.example_e {
+	border: none;
+	background: #404040;
+	color: #ffffff !important;
+	font-weight: 100;
+	padding: 1rem;
+	text-transform: uppercase;
+	border-radius: 6px;
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	align-self: center;
+	margin-bottom: 1rem;
+}
+
+.example_e:hover {
+	color: #404040 !important;
+	font-weight: 700 !important;
+	letter-spacing: 3px;
+	background: none;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	box-shadow: inset 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	transition: all 0.3s ease 0s;
 }

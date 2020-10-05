@@ -36,3 +36,12 @@
 		transform: rotate(360deg);
 	}
 }
+
+/* About Page */
+.about-page-right {
+	font-size: small;
+}
+
+img {
+	border-radius: 50%;
+}
