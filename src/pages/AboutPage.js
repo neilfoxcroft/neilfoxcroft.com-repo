@@ -7,6 +7,7 @@ import '../App.css';
 import Content from '../components/Content.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Carousel from '../components/Carousel.js';
+import { Tweet } from 'react-twitter-widgets';
 
 function AboutPage(props) {
 
@@ -67,12 +68,30 @@ function AboutPage(props) {
 
                 <Col>
                     <Content>
-                        <p>With my degree I had exposure to various technologys, projects and poeple. We covered a wide variety of Information Technology aspects and developed a strong foundation for future learning.</p>
+                        <p>With my degree, I had exposure to various technologies, projects and people. We covered a wide variety of Information Technology aspects and developed a strong foundation for future learning.</p>
+                        <p>
+                        Teamwork was essential to a successful project. I learned to work efficiently in a team and to collaborate with other developers remotely.
+                        </p>
+                        <p>While attending university I was part of several different societies and organizations. In my first year as a resident of De Wilger's Men's Hostel, I participated in the debate team where we attended and hosted several debates on campus. I qualified for the De Wilger's Enkel Sêr, a yearly Accapella competition each residence on the NWU participates in.</p>
                     </Content>
                 </Col>          
             </Row>
+            <Row>
+                <Col>
+                <LargeBanner subTitle="RAG/JOOL NPO"/>
+                <Content>
+                    <p>
+                    RAG a large non-profit organization in the Southern Hemisphere.</p>
+                    <p>
+                    Responsibilities: Security, Maintenance, Expansion Projects and Team-building exercises. </p>
+                    <p>
+                    As a member of the technical committee in RAG, I had to apply various problem-solving techniques and had to work in large teams to ensure successful events.
+                    </p>
+                </Content>
+                </Col>
+            </Row>
             </Container>
-            <LargeBanner title="Skills" subTitle="some of the weapons in my developer arsenal" homeText="throughout my studies, we needed to work with a variety of software, languages and interfaces"/>
+            <LargeBanner title="Skills" subTitle="some of my tools" homeText="throughout my studies, we needed to work with a variety of software, languages and interfaces"/>
             <Content>
                 <p>I enjoy programming in Java, Python and C#. Recently while learning ReactJS have I acquired a taste for JavaScript, HTML and CSS as well. In my time studying BSc in Information Technology I also worked with Relational databases, SQL, Propositional Logic concerning Artificial Intelligence and Object Orientated Programming just to name a few of my favourites fields.</p>
                 <p>Excel, Microsoft Office, Visual Studio Code, Emailing and Scheduling using a calendar program are set in my work routine.</p>
@@ -87,16 +106,61 @@ function AboutPage(props) {
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'js']} />
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'aws']} />
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'git']} />
-                    <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'node']} />
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'npm']} />
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'react']} />
                     <FontAwesomeIcon id="font-icon-skills" className="p-2.5" icon={['fab', 'python']} />
                 </div>
             </Row>
             </Container>
+
             <LargeBanner title="Personal Projects" subTitle="Some projects for Personal Development" />
+
+
             <Carousel/>
+
             <LargeBanner title="BLEGO" subTitle="a Patent I helped create while Competing in the First-Lego League" />
+            <Container fluid>
+            <Row>
+                <Col>
+                        <Content>
+                        <LargeBanner subTitle="Issued Jul 10, 2017  Patent issuer,  number: za F2016/01587" />
+                        <p>
+                        The design is to be applied to a set of toy blocks. The features for which protection is claimed
+                        are those of shape and/or configuration, for Braille-like identification, substantially as shown
+                        in the accompanying representations.
+                        </p>
+                        <p>
+                        The purpose of the design is to aid visually impaired individuals to build with toy blocks and still have the added functionality of colour identification.  
+                        </p>
+                        <p>
+                        For the names of the other team members and creators head to my <a rel="noopener noreferrer" href="https://www.linkedin.com/in/neil-foxcroft-39a7991a1/" target="_blank" >LinkedIn</a>
+                        </p>
+                        <LargeBanner subTitle="What is FIRST® LEGO® League?" />
+                        <p>
+                        FIRST® LEGO® League introduces science, technology, engineering, and math (STEM) to children ages 4-16* through fun, exciting hands-on learning. Participants gain real-world problem solving experience through a guided, global robotics program, helping today's students and teachers build a better future together.
+                        Our three divisions inspire youth to experiment and grow their critical thinking, coding, and design skills through hands-on STEM learning and robotics.
+                        </p>
+                        <p>Our team designed and programmed a robot to complete various tasks.
+                            We developed a patent to aid in the education of visually impaired
+                            students and we won the regional championship. </p>
+                    </Content>
+                </Col>          
+            </Row>
+            </Container>
+
+            <LargeBanner title="Tweets"/>
+            <Container fluid>
+            <Row>      
+                <Col md={8} sm={12} style={{marginLeft: "4rem"}}>
+                <Tweet tweetId={props.tweetId} options={{align: "center"}}/>
+                </Col>
+                <Col>
+                <LargeBanner subTitle="Check out some of the latest tweets from @developer_news" />
+                </Col>
+            </Row>
+            </Container>
+
+
             <Container fluid={true}>
                         <Row className="justify-content-center py-5">
                             <Col md={8} sm={12}>

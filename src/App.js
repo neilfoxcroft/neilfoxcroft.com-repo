@@ -40,11 +40,14 @@ class App extends React.Component {
       },
       hits: 0,
       loading: true,
+      tweetid: "462209959736795136",
     }
   }
 
   async componentDidMount() {
     const url = "https://api.countapi.xyz/hit/neilfoxcroft.com/key";
+    //const tweeturl = "https://api.twitter.com/1.1/statuses/show.json?id=462209959736795136";
+ 
       
     const response = await fetch(url);
     const hit = await response.json();
@@ -72,7 +75,7 @@ class App extends React.Component {
 
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} homeText={this.state.home.homeText} />} />
-          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} /> } />
+          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} tweetId={this.state.tweetid}/> } />
           <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} />} />
 
           <Footer loading={this.state.loading} hits={this.state.hits} />

@@ -28,7 +28,7 @@ function Footer(props) {
                         </button>
                     </Col>
                     <Col className="p-0 d-flex justify-content-end" md={3}>
-                        This site was created by Neil Foxcroft © 2020
+                        created by Neil Foxcroft © 2020
                     </Col>
                 </Row>
             </Container>

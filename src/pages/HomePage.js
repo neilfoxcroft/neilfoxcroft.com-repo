@@ -9,7 +9,7 @@ function HomePage(props) {
     return (
         <div style={{height: "100%", margin: "0", overflow: "hidden"}}>
             <div id="first">   
-            <LargeBanner title={props.title} subTitle={props.subTitle} homeText="from training projects to personal experiments."/>
+            <LargeBanner title={props.title} subTitle={props.subTitle}/>
                 <div id="home-button">
                     <Container fluid={true}>
                         <Row className="justify-content-center py-5">
