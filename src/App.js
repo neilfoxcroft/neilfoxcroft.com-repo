@@ -12,6 +12,8 @@ import HomePage from "./pages/HomePage.js"
 import AboutPage from "./pages/AboutPage.js"
 import ContactPage from "./pages/ContactPage.js"
 
+
+
 library.add(fab)
 
 class App extends React.Component {
@@ -35,16 +37,25 @@ class App extends React.Component {
       },
       contact: {
         title: 'Contact Me',
-      }
+      },
+      hits: 0,
+      loading: true,
     }
+  }
+
+  async componentDidMount() {
+    const url = "https://api.countapi.xyz/hit/neilfoxcroft.com/key";
+      
+    const response = await fetch(url);
+    const hit = await response.json();
+    this.setState({hits: hit.value, loading: false});
   }
 
   render() {
     return (
      <Router>
        <Container className="p-0" fluid={true}>
-
-          <Navbar className="border-bottom" bg="transparrent" expand="lg">
+          <Navbar className="border-bottom" bg="white" expand="lg">
             <Navbar.Brand>{this.state.title}</Navbar.Brand>
 
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
@@ -56,13 +67,16 @@ class App extends React.Component {
               </Nav>     
             </Navbar.Collapse>
           </Navbar>
+          
+
 
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} homeText={this.state.home.homeText} />} />
           <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} /> } />
           <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} />} />
-          
-          <Footer />
+
+          <Footer loading={this.state.loading} hits={this.state.hits} />
+
        </Container>
       </Router>
     );

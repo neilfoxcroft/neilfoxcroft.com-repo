@@ -15,8 +15,18 @@ class ContactPage extends React.Component {
             message: '',
             disabled: false,
             emailSent: null,
+            hits: 0,
+            loading: true,
         }
     }
+
+    async componentDidMount() {
+        const url = "https://api.countapi.xyz/hit/neilfoxcroft.com/key";
+          
+        const response = await fetch(url);
+        const hit = await response.json();
+        this.setState({hits: hit.value, loading: false});
+      }
 
     handleChange = (event) => {
         console.log(event);
@@ -55,8 +65,7 @@ class ContactPage extends React.Component {
                 disabled: true,
                 emailSent: false,
             })
-          });
-         
+          });   
     }
 
     render() {
@@ -67,7 +76,7 @@ class ContactPage extends React.Component {
               <Content>
                     <Form id="contact-form-element" onSubmit={this.handleSubmit}>
                         <Form.Group>
-                            <Form.Label htmlFor="full-name">Full Name</Form.Label>
+                            <Form.Label htmlFor="full-name">Name</Form.Label>
                             <Form.Control required 
                             id="full-name" 
                             name="user_name" 

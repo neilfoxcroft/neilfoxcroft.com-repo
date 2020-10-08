@@ -1,11 +1,10 @@
 import React from 'react';
 import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
-//import {Spring} from 'react-spring/renderprops'
 
 function LargeBanner(props) {
 
     return(
-        <Jumbotron className="bg-transparent jumbotron-fluid p-0">
+        <Jumbotron className="bg-transparent jumbotron-fluid p-0 mb-0">
             <Container fluid={true} >
                 <Row className="justify-content-center py-5">
                     <Col md={8} sm={12}>
