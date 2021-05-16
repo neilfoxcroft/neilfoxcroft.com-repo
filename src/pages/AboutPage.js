@@ -37,7 +37,7 @@ function AboutPage(props) {
                             I’ve always had a keen interest in anything that is TECHNOLOGY related... whether that be doing some self-learn coding or modelling a simple database solution ... or participating in a robotics development challenge.
                             </p>
                             <p>
-                            In my opinion, life will be very bland if we are never faced with challenges from time to time.
+                            life will be very bland if we are never faced with challenges from time to time.
                             </p>
                         </Content>
                     </Col>
