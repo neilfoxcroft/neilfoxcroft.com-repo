@@ -31,7 +31,7 @@ function AboutPage(props) {
                             Hi,
                             </p>
                             <p>
-                            I'm Neil. And I am a final year BSc Information Technology student at North-West University. I will soon be completing my degree and I’m looking forward to joining the work environment in the IT space shortly.
+                            I'm Neil Foxcroft. And I am a final year BSc Information Technology student at North-West University. I will soon be completing my degree and I’m looking forward to joining the work environment in the IT space shortly.
                             </p>
                             <p>
                             I’ve always had a keen interest in anything that is TECHNOLOGY related... whether that be doing some self-learn coding or modelling a simple database solution ... or participating in a robotics development challenge.
